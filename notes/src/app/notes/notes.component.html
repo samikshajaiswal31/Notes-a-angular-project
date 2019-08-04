@@ -1,0 +1,9 @@
+<h1   >NOTES</h1>
+
+<ul>
+  <li class = "notes" *ngFor = "let notes of this.notesservice.notes"   [class.completed]= "notes.isCompleted=== true"
+  (click) = "note.isCompleted = !(note.isCompleted)">
+  {{notes.content}}
+<a  routerLink = "/notes/edit/{{notes.id}}">Edit </a>
+</li>
+</ul>
